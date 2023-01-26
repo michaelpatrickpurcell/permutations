@@ -1,0 +1,76 @@
+\documentclass{standalone}
+
+\usepackage{permutations}
+\setmainfont[Scale=0.95]{digital geometric-Light}%{Roboto Slab}%{Roboto Mono}
+
+\newlength{\xlen}
+\setlength{\xlen}{2.3mm}
+
+\newlength{\yshift}
+\setlength{\yshift}{0.15mm}
+
+\newlength{\ylen}
+\setlength{\ylen}{4.5mm}
+
+\newlength{\klen}
+\setlength{\klen}{0em}%{0.125em}
+
+\newcommand{\cc}[2]{\contour*{black}{\textcolor{#1}{#2}}}
+\newcommand{\dd}[2]{{\setmainfont[Scale=0.95]{digital geometric-light}\contour*{black}{\textcolor{#1}{#2}}}}
+
+\colorlet{permred}{Red}
+\colorlet{permyellow}{Goldenrod}
+\colorlet{permgreen}{ForestGreen}
+\colorlet{permblue}{RoyalBlue}
+
+\tikzset{every node/.style={text height=1.5ex, text depth=.25ex, inner sep = 0pt}}
+\begin{document}
+\begin{tikzpicture}
+
+%\foreach \x/\xtext in {-5/\cc{permred}{p}, -4/\cc{permyellow}{e}, -3/\cc{permblue}{r}, -2/\cc{permgreen}{m}, -1/\cc{permred}{u}, 0/\cc{permyellow}{t}, 1/\cc{permblue}{a}, 2/\cc{permgreen}{t}, 3/\cc{permred}{i}, 4/\cc{permyellow}{o}, 5/\cc{permblue}{n}}
+%	\node at (\x*\xlen,-3*\ylen + \yshift) {\xtext};
+%
+%\foreach \x/\xtext in {-5/\cc{permblue}{p}, -4/\cc{permgreen}{e}, -3/\cc{permred}{r}, -2/\cc{permyellow}{m}, -1/\cc{permblue}{u}, 0/\cc{permgreen}{t}, 1/\cc{permred}{a}, 2/\cc{permyellow}{t}, 3/\cc{permblue}{i}, 4/\cc{permgreen}{o}, 5/\cc{permred}{n}}
+%	\node at (\x*\xlen,-2*\ylen + \yshift) {\xtext};
+%
+%\foreach \x/\xtext in {-5/\cc{permred}{p}, -4/\cc{permyellow}{e}, -3/\cc{permblue}{r}, -2/\cc{permgreen}{m}, -1/\cc{permred}{u}, 0/\cc{permyellow}{t}, 1/\cc{permblue}{a}, 2/\cc{permgreen}{t}, 3/\cc{permred}{i}, 4/\cc{permyellow}{o}, 5/\cc{permblue}{n}}
+%	\node at (\x*\xlen,-\ylen + \yshift) {\xtext};
+
+%\foreach \x/\xtext in {-5.5/\cc{permred}{p}, -4.5/\cc{permblue}{e}, -3.5/\cc{permblue}{r}, -2.5/\cc{permgreen}{m}, -1.5/\cc{permgreen}{u}, -0.5/\cc{permblue}{t}, 0.5/\cc{permgreen}{a}, 1.5/\cc{permblue}{t}, 2.5/\cc{permblue}{i}, 3.5/\cc{permgreen}{o}, 4.5/\cc{permred}{n}, 5.5/\cc{permblue}{s}}
+%	\node at (\x*\xlen,1.5*\ylen + \yshift) {\xtext};
+
+%\foreach \x/\xtext in {-5.5/\cc{permyellow}{p}, -4.5/\cc{permgreen}{e}, -3.5/\cc{permyellow}{r}, -2.5/\cc{permred}{m}, -1.5/\cc{permyellow}{u}, -0.5/\cc{permred}{t}, 0.5/\cc{permyellow}{a}, 1.5/\cc{permred}{t}, 2.5/\cc{permyellow}{i}, 3.5/\cc{permred}{o}, 4.5/\cc{permyellow}{n}, 5.5/\cc{permgreen}{s}}
+%	\node at (\x*\xlen,0.5*\ylen + \yshift) {\xtext};
+
+%\foreach \x/\xtext in {-5.5/\cc{White}{p}, -4.5/\cc{White}{e}, -3.5/\cc{White}{r}, -2.5/\cc{White}{m}, -1.5/\cc{White}{u}, -0.5/\cc{White}{t}, 0.5/\cc{White}{a}, 1.5/\cc{White}{t}, 2.5/\cc{White}{i}, 3.5/\cc{White}{o}, 4.5/\cc{White}{n}, 5.5/\cc{White}{s}}
+%	\node at (\x*\xlen,0mm + \yshift) {\xtext};
+
+%\foreach \x/\xtext in {-5.5/\cc{permgreen}{p}, -4.5/\cc{permyellow}{e}, -3.5/\cc{permred}{r}, -2.5/\cc{permyellow}{m}, -1.5/\cc{permred}{u}, -0.5/\cc{permyellow}{t}, 0.5/\cc{permred}{a}, 1.5/\cc{permyellow}{t}, 2.5/\cc{permred}{i}, 3.5/\cc{permyellow}{o}, 4.5/\cc{permgreen}{n}, 5.5/\cc{permyellow}{s}}
+%	\node at (\x*\xlen,-0.5*\ylen + \yshift) {\xtext};
+
+%\foreach \x/\xtext in {-5.5/\cc{permblue}{p}, -4.5/\cc{permred}{e}, -3.5/\cc{permgreen}{r}, -2.5/\cc{permblue}{m}, -1.5/\cc{permblue}{u}, -0.5/\cc{permgreen}{t}, 0.5/\cc{permblue}{a}, 1.5/\cc{permgreen}{t}, 2.5/\cc{permgreen}{i}, 3.5/\cc{permblue}{o}, 4.5/\cc{permblue}{n}, 5.5/\cc{permred}{s}}
+%	\node at (\x*\xlen,-1.5*\ylen + \yshift) {\xtext};
+
+%\foreach \x/\xtext in {-5/p, -4/e, -3/r, -2/m, -1/u, 0/t, 1/a, 2/t, 3/i, 4/o, 5/n}
+%	\node at (\x*\xlen,\ylen + \yshift) {\xtext};
+%
+%\foreach \x/\xtext in {-5/p, -4/e, -3/r, -2/m, -1/u, 0/t, 1/a, 2/t, 3/i, 4/o, 5/n}
+%	\node at (\x*\xlen,2*\ylen + \yshift) {\xtext};
+%	
+%\foreach \x/\xtext in {-5/p, -4/e, -3/r, -2/m, -1/u, 0/t, 1/a, 2/t, 3/i, 4/o, 5/n}
+%	\node at (\x*\xlen,3*\ylen + \yshift) {\xtext};
+
+\node at (0,1.5*\ylen) {\cc{permred}{P}\kern \klen\cc{permblue}{e}\kern \klen\cc{permblue}{r}\kern \klen\cc{permgreen}{m}\kern \klen\cc{permgreen}{u}\kern \klen\cc{permblue}{t}\kern \klen\cc{permgreen}{a}\kern \klen\cc{permblue}{t}\kern \klen\cc{permblue}{i}\kern \klen\cc{permgreen}{o}\kern \klen\cc{permred}{n}\kern \klen\cc{permblue}{s}};
+
+\node at (0,0.5*\ylen) {\cc{permyellow}{P}\kern \klen\cc{permgreen}{e}\kern \klen\cc{permyellow}{r}\kern \klen\cc{permred}{m}\kern \klen\cc{permyellow}{u}\kern \klen\cc{permred}{t}\kern \klen\cc{permyellow}{a}\kern \klen\cc{permred}{t}\kern \klen\cc{permyellow}{i}\kern \klen\cc{permred}{o}\kern \klen\cc{permyellow}{n}\kern \klen\cc{permgreen}{s}};
+
+\node at (0,-0.5*\ylen) {\cc{permgreen}{P}\kern \klen\cc{permyellow}{e}\kern \klen\cc{permred}{r}\kern \klen\cc{permyellow}{m}\kern \klen\cc{permred}{u}\kern \klen\cc{permyellow}{t}\kern \klen\cc{permred}{a}\kern \klen\cc{permyellow}{t}\kern \klen\cc{permred}{i}\kern \klen\cc{permyellow}{o}\kern \klen\cc{permgreen}{n}\kern \klen\cc{permyellow}{s}};
+
+\node at (0,-1.5*\ylen) {\cc{permblue}{P}\kern \klen\cc{permred}{e}\kern \klen\cc{permgreen}{r}\kern \klen\cc{permblue}{m}\kern \klen\cc{permblue}{u}\kern \klen\cc{permgreen}{t}\kern \klen\cc{permblue}{a}\kern \klen\cc{permgreen}{t}\kern \klen\cc{permgreen}{i}\kern \klen\cc{permblue}{o}\kern \klen\cc{permblue}{n}\kern \klen\cc{permred}{s}};
+
+%\node at (0,-1.5*\ylen) {\cc{permblue}{P}\kern \klen\cc{permred}{E}\kern \klen\cc{permgreen}{R}\kern \klen\cc{permblue}{M}\kern \klen\cc{permblue}{U}\kern \klen\cc{permgreen}{T}\kern \klen\cc{permblue}{A}\kern \klen\cc{permgreen}{T}\kern \klen\cc{permgreen}{I}\kern \klen\cc{permblue}{O}\kern \klen\cc{permblue}{N}\kern \klen\cc{permred}{S}};
+
+\path (-1.4175cm, -1.125cm) -- (1.4175cm, 1.125cm);
+
+\end{tikzpicture}
+\end{document}
