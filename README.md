@@ -46,4 +46,4 @@ The following table describes your score for each possible maxcount.
 | -------- | --: | --: | --: | --: | --: | --: | --: | --: | --: |
 | Score    |  6  | 10  | 15  | 21  | 28  | 36  | 45  | 55  | 66  |
 
-Notice that these are triangular numbers. That is, if your maxcount for a given round is $m$, then your for that round is $m(m+1)/2$. Alternatively, you can think of scoring points for each card of your maxcount colour. In this case, you score for $i$ points for the $ith$ card in your maxcount colour.
+Notice that these are triangular numbers. That is, if your maxcount for a given round is $m$, then your score for that round is $m(m+1)/2$. 
